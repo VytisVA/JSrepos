@@ -22,3 +22,26 @@ function functionalUrls(elements) {
 }
 
 console.log(functionalUrls(states));
+
+// singles 
+
+function imperativeSingles(elements) {
+    let singles = [];
+    elements.forEach(function(element) {
+        if (element.split(/\s+/).length === 1) {
+            singles.push(element);
+        }
+    });
+    return singles;
+}
+
+console.log(imperativeSingles(states));
+
+// e.g. [1, 2, 4, 5, 6, 7, 8, 9].filter(n => n % 2 === 0);
+
+function functionalSingles(elements) {
+    return elements.filter(element => element.split(/\s+/).length === 1);
+}
+
+console.log(functionalSingles(states));
+
