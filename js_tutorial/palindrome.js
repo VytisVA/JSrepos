@@ -3,9 +3,15 @@ function reverse(string) {
     return Array.from("").reverse().join("");
 }
 
-// Return true of a palindrome function, false otherwise
+// defines a Phrase object.
 
-function palindrome(string) {
-    let processedContent = string.toLowerCase();
-    return processedContent === reverse(processedContent);
+function Phrase(content) {
+    this.content = content;
+
+    // Return true of a palindrome function, false otherwise
+    
+    this.palindrome = function palindrome() {
+        let processedContent = this.toLowerCase();
+        return processedContent === reverse(processedContent);
+    }
 }
